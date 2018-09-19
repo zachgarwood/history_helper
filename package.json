@@ -13,7 +13,9 @@
   "scripts": {
     "build": "ember build",
     "lint:js": "eslint .",
-    "start": "ember serve",
+    "start": "npm run start:server & npm run start:client && wait",
+    "start:server": "source srv/routes.sh",
+    "start:client": "ember serve",
     "test": "ember test"
   },
   "devDependencies": {
