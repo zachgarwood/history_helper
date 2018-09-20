@@ -1,0 +1,15 @@
+<div class="line">
+    <span class="rerun">{{rerunCommand}}</span>
+    <span class="command">{{command.name}}</span>
+    <span class="args">{{command.args}}</span>
+</div>
+<div class="details">
+    {{#if showDocumentation}}
+        <button onclick={{action (mut showDocumentation) false}}>-</button>
+        <p><pre>{{command.documentation.help}}</pre></p>
+        <hr>
+        <p><pre>{{command.documentation.info}}</pre></p>
+    {{else}}
+        <button onclick={{action (mut showDocumentation) true}}>+</button>
+    {{/if}}
+</div>
