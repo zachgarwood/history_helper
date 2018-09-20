@@ -11,8 +11,8 @@ jo commands="$(
             } else {
                 args=""
             }
-            printf "id=%d name=%s args=\"%s\"\n", id, name, args;
+            printf "id=%d name=%s args=\"%s\" documentation=%s\n", id, name, args, name;
         }' \
-        | xargs -n3 jo \
+        | xargs -n4 jo \
         | jo -a
 )"

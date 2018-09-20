@@ -1,5 +1,7 @@
-<ul>
+<dl>
 {{#each model as |command index|}}
-    <li><b>{{index}}</b> {{command.id}} - {{command.name}} {{command.args}}</li>
+    <dt>{{command.name}}</dt>
+    <dd><pre>{{command.documentation.help}}</pre></dd>
+    <dd><pre>{{command.documentation.info}}</pre></dd>
 {{/each}}
-</ul>
+</dl>
